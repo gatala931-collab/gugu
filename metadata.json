@@ -1,0 +1,6 @@
+{
+  "name": "Nourish AI — Personal Nutrition Coach",
+  "description": "Track local foods, nutrition goals and food spending with a practical personal coach.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

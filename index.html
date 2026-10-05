@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Nutry AI — Smart Meal Suggestions & Nutrition</title>
+    <meta name="description" content="Track local foods, nutrition goals and smart meal suggestions with Nutry AI." />
+    <meta property="og:title" content="Nutry AI — Smart Meal Suggestions & Nutrition" />
+    <meta property="og:description" content="Track local foods, nutrition goals and smart meal suggestions with Nutry AI." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#10b981" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Nutry AI" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <script>
+      (function() {
+        const origErr = console.error;
+        console.error = function(...args) {
+          if (typeof args[0] === 'string' && (args[0].includes('[vite]') || args[0].includes('WebSocket') || args[0].includes('dev-ready'))) {
+            return;
+          }
+          origErr.apply(console, args);
+        };
+        window.addEventListener('unhandledrejection', function(event) {
+          const reason = String(event.reason?.message || event.reason || '');
+          if (reason.includes('WebSocket') || reason.includes('[vite]')) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+          }
+        });
+        window.addEventListener('error', function(event) {
+          const msg = String(event.message || '');
+          if (msg.includes('WebSocket') || msg.includes('[vite]')) {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+          }
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
